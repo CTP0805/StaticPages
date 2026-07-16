@@ -1,0 +1,169 @@
+#protfolio {
+  background: url('./img/background.gif') center/cover no-repeat;
+  background-position: 0 -400px;
+  padding: 80px 8%;
+  position: relative;
+
+}
+#protfolio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+    pointer-events: none;
+}
+
+#protfolio .section-title,
+#protfolio .protfolio-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.protfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 160px 160px 160px 160px;
+  gap: 10px;
+}
+
+.protfolio-item {
+  border-radius: 14px;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.protfolio-item:hover {
+  border-color: #f472b6;
+  box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.2);
+}
+
+.protfolio-item:nth-child(1),
+.protfolio-item:nth-child(2),
+.protfolio-item:nth-child(3),
+.protfolio-item:nth-child(4),
+.protfolio-item:nth-child(5),
+.protfolio-item:nth-child(6) {
+  perspective: 800px;
+  overflow: visible;
+}
+
+.protfolio-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.protfolio-item:hover .protfolio-card {
+  transform: rotateY(180deg);
+}
+
+.protfolio-front,
+.protfolio-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.protfolio-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.97) saturate(1.05);
+}
+
+.protfolio-back {
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  padding: 16px;
+}
+
+.protfolio-back h3 {
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.protfolio-back p {
+  color: rgba(255,255,255,.85);
+  font-size: .78rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.protfolio-item:nth-child(3) .protfolio-front img { object-position: 0 -150px; }
+
+.protfolio-item:nth-child(7),
+.protfolio-item:nth-child(8),
+.protfolio-item:nth-child(9),
+.protfolio-item:nth-child(10),
+.protfolio-item:nth-child(11),
+.protfolio-item:nth-child(12) {
+  overflow: hidden;
+}
+
+.protfolio-item:nth-child(7) img,
+.protfolio-item:nth-child(8) img,
+.protfolio-item:nth-child(9) img,
+.protfolio-item:nth-child(10) img,
+.protfolio-item:nth-child(11) img,
+.protfolio-item:nth-child(12) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.97) saturate(1.05);
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.protfolio-item:nth-child(7):hover img,
+.protfolio-item:nth-child(8):hover img,
+.protfolio-item:nth-child(9):hover img,
+.protfolio-item:nth-child(10):hover img,
+.protfolio-item:nth-child(11):hover img,
+.protfolio-item:nth-child(12):hover img {
+  transform: scale(1.08);
+  filter: brightness(1.05) saturate(1.2);
+}
+
+.protfolio-item:nth-child(7)  img { object-position: 0 -30px; }
+.protfolio-item:nth-child(8)  img { object-position: 0 -170px; }
+.protfolio-item:nth-child(9)  img { object-position: 0 -90px; }
+.protfolio-item:nth-child(10) img { object-position: 0 -12px; }
+.protfolio-item:nth-child(11) img { object-position: 0 -20px; }
+
+.protfolio-item:nth-child(1)  { grid-column: 1 / 3; grid-row: 1 / 3; }
+.protfolio-item:nth-child(2)  { grid-column: 3;     grid-row: 1;     }
+.protfolio-item:nth-child(3)  { grid-column: 4 / 6; grid-row: 1;     }
+.protfolio-item:nth-child(4)  { grid-column: 3;     grid-row: 2;     }
+.protfolio-item:nth-child(5)  { grid-column: 4;     grid-row: 2;     }
+.protfolio-item:nth-child(6)  { grid-column: 5;     grid-row: 2;     }
+.protfolio-item:nth-child(7)  { grid-column: 1;     grid-row: 3;     }
+.protfolio-item:nth-child(8)  { grid-column: 2 / 4; grid-row: 3 / 5; }
+.protfolio-item:nth-child(9)  { grid-column: 4 / 6; grid-row: 3;     }
+.protfolio-item:nth-child(10) { grid-column: 1;     grid-row: 4;     }
+.protfolio-item:nth-child(11) { grid-column: 4;     grid-row: 4;     }
+.protfolio-item:nth-child(12) { grid-column: 5;     grid-row: 4;     }
+
+@media (max-width: 768px) {
+  .protfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .protfolio-item {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 140px;
+  }
+}

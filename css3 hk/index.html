@@ -1,0 +1,318 @@
+    <!doctype html>
+    <html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>作品</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/style/reset.css" />
+        <link rel="stylesheet" href="/style/header.css" />
+        <link rel="stylesheet" href="/style/hero.css" />
+        <link rel="stylesheet" href="/style/data.css" />
+        <link rel="stylesheet" href="/style/picprofile.css" />
+        <link rel="stylesheet" href="/style/contact.css" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <style>
+        #particles-js {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        :root {
+            --pink: #f472b6;
+            --pink-light: #fce7f3;
+            --pink-mid: #db2777;
+            --purple: #a855f7;
+            --purple-dark: #7c3aed;
+            --violet-grad: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+            --text: #3b0764;
+            --text-light: #9333ea;
+            --white: #fff;
+            --bg-base: #fdf8ff;
+            --bg-gray: #f5f0ff;
+            --nav-h: 70px;
+            --radius: 16px;
+        }
+        .container {
+            max-width: 1100px; 
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        footer {
+            text-align: center;
+            padding: 1.6rem;
+            font-size: 0.8rem;
+            color: #a855f7;
+            background: linear-gradient(90deg, #fce7f3, #ede9fe);
+            border-top: 2px solid #f9a8d4;
+            letter-spacing: 0.06em;
+        }
+
+        @media (max-width: 768px) {
+            #about {
+            grid-template-columns: 1fr;
+            padding: 60px 6%;
+            gap: 32px;
+            }
+            #protfolio {
+                background-position: center 0px;  /* 數字越大越往下 */
+            }
+            .hero-photo {
+            width: 200px;
+            height: 240px;
+            }
+            #contact {
+            grid-template-columns: 1fr;
+            }
+            .exp-card {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div id="particles-js"></div>
+
+        <header>
+            <div class="hero-photo-wrap">
+            <img src="/img/logo.jpg" alt="" />
+            </div>
+            <nav class="manu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#protfolio">protfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+        <section id="about">
+            <div class="hero-triangle"></div>
+            <div class="hero-squiggle"></div>
+            <!-- 第一排：標題 -->
+            <div class="hero-heading">
+            <h1>Mandy Smith</h1>
+            <p class="tagline">發揮無限創意，為您做出好設計</p>
+            </div>
+
+            <div class="hero-body">
+            <div class="hero-left">
+                <div class="hero-photos">
+                <img
+                    class="hero-photo"
+                    src="./img/about01.jpg"
+                    alt="Mandy Smith 1"
+                />
+                <img
+                    class="hero-photo"
+                    src="./img/about02.jpg"
+                    alt="Mandy Smith 2"
+                />
+                <img
+                    class="hero-photo"
+                    src="./img/about03.jpg"
+                    alt="Mandy Smith 3"
+                />
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <p class="intro">
+                早安各位 我是毛毛<br />
+                我超棒
+                </p>
+                <div class="info-block">
+                <h3>聯絡方式</h3>
+                <p class="info-item"><i class="fa-solid fa-envelope"></i> hello@mandysmith.com</p>
+                <p class="info-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/mandysmith</p>
+                </div>
+                <div class="chart-box">
+                <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">updeta time</h2>
+            <div class="exp-list">
+            <div class="exp-card">
+                <span class="exp-date">2022/01 – 2025/03</span>
+                <div class="exp-img">
+                <img src="./img/exp-img.jpg" alt="Company A" />
+                </div>
+                <div>
+                <div class="exp-company">Company Name A</div>
+                <div class="exp-title">Senior UI/UX Designer</div>
+                </div>
+                <span class="exp-tag">全職</span>
+            </div>
+
+            <div class="exp-card">
+                <span class="exp-date">2020/06 – 2021/12</span>
+                <div class="exp-img">
+                <img src="./img/exp-img.jpg" alt="Company B" />
+                </div>
+                <div>
+                <div class="exp-company">Company Name B</div>
+                <div class="exp-title">Visual Designer</div>
+                </div>
+                <span class="exp-tag">全職</span>
+            </div>
+
+            <div class="exp-card">
+                <span class="exp-date">2019/03 – 2020/05</span>
+                <div class="exp-img">
+                <img src="./img/exp-img.jpg" alt="Company C" />
+                </div>
+                <div>
+                <div class="exp-company">Company Name C</div>
+                <div class="exp-title">Graphic Designer</div>
+                </div>
+                <span class="exp-tag">兼職</span>
+            </div>
+
+            <div class="exp-card">
+                <span class="exp-date">2017/08 – 2019/02</span>
+                <div class="exp-img">
+                <img src="/img/exp-img.jpg" alt="Company D" />
+                </div>
+                <div>
+                <div class="exp-company">Company Name D</div>
+                <div class="exp-title">Design Intern</div>
+                </div>
+                <span class="exp-tag">實習</span>
+            </div>
+            </div>
+        </section>
+
+        <section id="protfolio">
+            <h2 class="section-title">作品集</h2>
+            <div class="protfolio-grid">
+        <div class="protfolio-item">
+            <div class="protfolio-card">
+                <div class="protfolio-front">
+                    <img src="./img/001.jpg" alt="Project 1" />
+                </div>
+                <div class="protfolio-back">
+                    <p>Silence devours worlds, leaving only power</p>
+                </div>
+            </div>
+        </div>
+        <div class="protfolio-item">
+            <div class="protfolio-card">
+                <div class="protfolio-front">
+                    <img src="./img/002.jpg" alt="Project 1" />
+                </div>
+                <div class="protfolio-back">
+                    <p>Through ashes we rise beyond gods</p>
+                </div>
+            </div>
+        </div>
+        <div class="protfolio-item">
+            <div class="protfolio-card">
+                <div class="protfolio-front">
+                    <img src="./img/003.jpg" alt="Project 1" />
+                </div>
+                <div class="protfolio-back">
+                    <p>Silence echoes louder than shattered worlds</p>
+                </div>
+            </div>
+        </div>
+        <div class="protfolio-item">
+            <div class="protfolio-card">
+                <div class="protfolio-front">
+                    <img src="./img/004.jpg" alt="Project 1" />
+                </div>
+                <div class="protfolio-back">
+                    <p>Ashes remember the rise of fallen gods</p>
+                </div>
+            </div>
+        </div>
+        <div class="protfolio-item">
+            <div class="protfolio-card">
+                <div class="protfolio-front">
+                    <img src="./img/005.jpg" alt="Project 1" />
+                </div>
+                <div class="protfolio-back">
+                    <p>Crowned in ruin, we command endless night</p>
+                </div>
+            </div>
+        </div>
+        <div class="protfolio-item">
+            <div class="protfolio-card">
+                <div class="protfolio-front">
+                    <img src="./img/006.jpg" alt="Project 1" />
+                </div>
+                <div class="protfolio-back">
+                        <p>Born in darkness, destined for greatness</p>
+                </div>
+            </div>
+        </div>
+        <div class="protfolio-item">
+            <img src="./img/007.jpg" alt="Project 7" />
+        </div>
+        <div class="protfolio-item">
+            <img src="./img/008.jpg" alt="Project 8" />
+        </div>
+        <div class="protfolio-item">
+            <img src="./img/009.jpg" alt="Project 9" />
+        </div>
+        <div class="protfolio-item">
+            <img src="./img/010.jpg" alt="Project 10" />
+        </div>
+        <div class="protfolio-item">
+            <img src="./img/011.jpg" alt="Project 11" />
+        </div>
+        <div class="protfolio-item">
+            <img src="./img/012.jpg" alt="Project 12" />
+        </div>
+        </div>
+    </section>
+
+        <section id="contact">
+            <div class="contact-info">
+            <h2 class="section-title">Contact Me</h2>
+            <p>
+                歡迎與我聯繫，無論是合作邀請、<br />設計諮詢或任何想法都非常歡迎！💌
+            </p>
+            <div class="contact-detail">
+                <i class="fa-solid fa-location-dot"></i> 台北市, 台灣
+            </div>
+            <div class="contact-detail">
+                <i class="fa-solid fa-phone"></i> +886 912 345 678
+            </div>
+            <div class="contact-detail">
+                <i class="fa-solid fa-envelope"></i> hello@mandysmith.com
+            </div>
+            </div>
+
+            <form class="contact-form" onsubmit="return false;">
+            <input type="text" placeholder="姓名 ✦" />
+            <input type="email" placeholder="Email ✦" />
+            <input type="text" placeholder="主旨 ✦" />
+            <textarea placeholder="留言內容… ✦"></textarea>
+            <button class="btn-submit" type="submit"><i class="fa-solid fa-paper-plane"></i> 送出訊息</button>
+            </form>
+        </section>
+        </div>
+        <footer>2026 阿毛製品 &copy;</footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script src="/project.js"></script>
+    </body>
+    </html>

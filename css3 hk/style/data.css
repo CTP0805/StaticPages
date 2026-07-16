@@ -1,0 +1,102 @@
+section { padding: 80px 8%; }
+
+.exp-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* contain 保留完整 logo 不裁切 */
+    border-radius: 6px;
+}
+
+.section-title {
+    font-family: 'Zen Maru Gothic', 'Noto Sans TC', serif;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, #db2777, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.section-title::before {
+    content: '◆ ';
+    font-size: 1rem;
+}
+.section-title::after {
+    content: '';
+    position: absolute; left: 0; bottom: -6px;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, #f472b6, #a855f7);
+    border-radius: 2px;
+}
+
+#experience {
+    background: linear-gradient(160deg, #fdf4ff 0%, #f0f9ff 100%);
+}
+.exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.exp-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(244, 114, 182, .3);
+    border-radius: 16px;
+    padding: 1.2rem 1.6rem;
+    display: grid;
+    grid-template-columns: 120px 64px 1fr 160px;
+    align-items: center;
+    gap: 1.2rem;
+    box-shadow: 0 4px 16px rgba(168, 85, 247, .08);
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+    position: relative;
+    overflow: hidden;
+}
+.exp-card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #f472b6, #a855f7);
+    border-radius: 4px 0 0 4px;
+}
+.exp-card:hover {
+    transform: translateY(-4px) translateX(2px);
+    box-shadow: 0 12px 32px rgba(168, 85, 247, .16);
+    border-color: #f472b6;
+}
+.exp-date {
+    font-size: .76rem;
+    color: #9333ea;
+    font-weight: 500;
+}
+.exp-img {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, #fce7f3, #ede9fe);
+    border-radius: 12px;
+    border: 2px solid #f9a8d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 2px 8px rgba(244,114,182,.2);
+}
+.exp-company {
+    font-weight: 700;
+    font-size: .9rem;
+    color: #4c1d95;
+}
+.exp-title {
+    font-size: .82rem;
+    color: #9333ea;
+    margin-top: .15rem;
+}
+.exp-tag {
+    justify-self: end;
+    font-size: .74rem;
+    padding: .28rem .85rem;
+    background: linear-gradient(135deg, #fce7f3, #ede9fe);
+    color: #db2777;
+    border-radius: 99px;
+    border: 1px solid #f9a8d4;
+    font-weight: 600;
+}

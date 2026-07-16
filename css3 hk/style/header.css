@@ -1,0 +1,111 @@
+header {
+    overflow: hidden; 
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(90deg, #ffe0f0 0%, #ede0ff 100%);
+    border-bottom: 2px solid #f9a8d4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 16px rgba(255, 105, 180, 0.15);
+    position: sticky;
+    transition: background 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(219, 219, 219, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+
+.hero-photo-wrap {
+    width: 260px;
+    height: 50px;
+    overflow: hidden;    
+    border-radius: 5px;
+}
+
+
+.hero-photo-wrap img {
+    border-radius: 5px;
+    width: 100%;          
+    height: 100%;          
+    object-fit: cover;    
+    object-position: left 30%;  
+}
+
+header img {
+    height: 48px;
+    width: 100px;
+    margin-left: 20px;
+    object-fit: contain;
+}
+
+.header-photo-wrap {
+    width: 260px;
+    height: 260px;
+    overflow: hidden;   
+    border-radius: 16px;
+}
+
+.header-photo-wrap img {
+    width: 100%;          
+    height: 100%;         
+    object-fit: cover;    
+    object-position: center 20%;  
+}
+
+.logo {
+    margin-left: 20px;
+}
+.logo-text::before { content: '✦ '; }
+.logo-text::after  { content: ' ✦'; }
+
+.manu {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.manu ul {
+    display: flex;
+    padding: 0 16px;
+    gap: 4px;
+    list-style: none;
+}
+.manu li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.manu a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 6px 18px;
+    color: #7c3aed;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    line-height: 60px;
+}
+.manu a::before {
+    content: '⭐ ';
+    font-size: .7rem;
+    margin-right: 4px;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.manu a:hover {
+    background: linear-gradient(135deg, #fce7f3, #ede9fe);
+    color: #db2777;
+    transform: translateY(-2px);
+}
+.hero-photo:nth-child(1){
+    object-fit: cover;
+    object-position: 0px -150px;  
+}
+.manu a:hover::before { opacity: 1; }
